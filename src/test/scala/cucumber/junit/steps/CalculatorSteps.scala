@@ -10,6 +10,7 @@ class Calculator {
 
   def sum(a: Int, b: Int): Int = a + b
   def multiply(a: Int, b: Int): Int = a * b
+  def divide(a: Int, b: Int): Int = a / b
 
 }
 
@@ -30,6 +31,11 @@ class CalculatorSteps extends ScalaDsl with EN with Matchers {
   When("""{int} x {int} is submitted""") { (a: Int, b: Int) =>
     val multiply = calculator.get().multiply(a, b)
     result.set(multiply)
+  }
+
+  When("""{int} / {int} is submitted""") { (a: Int, b: Int) =>
+    val division = calculator.get().divide(a, b)
+    result.set(division)
   }
 
   Then("""it should show result {int}""") { (expected: Int) =>

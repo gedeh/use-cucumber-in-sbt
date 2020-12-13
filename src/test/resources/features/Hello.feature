@@ -12,3 +12,8 @@ Feature: Cucumber in SBT uisng JUnit framework
         Given a calculator
          When 5 x 4 is submitted
          Then it should show result 20
+
+    Scenario: Example division for a calculator
+        Given a calculator
+         When 8 / 4 is submitted
+         Then it should show result 2
