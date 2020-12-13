@@ -3,6 +3,7 @@ Feature: Cucumber in SBT uisng JUnit framework
     I want to run Cucumber test using SBT task
     So that I can run my CUucmber test via terminal
 
+    @tagged
     Scenario: Example addition for a calculator
         Given a calculator
          When 1 + 1 is submitted
